@@ -5,7 +5,6 @@ class Show < ActiveRecord::Base
   belongs_to :network
 
   def actors_list
-    binding.pry
     self.characters.collect do |c|
       info = "#{c.actor.first_name} #{c.actor.last_name}"
       info
