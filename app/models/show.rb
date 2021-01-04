@@ -6,6 +6,9 @@ class Show < ActiveRecord::Base
 
   def actors_list
     binding.pry
-
+    self.characters.collect do |c|
+      info = "#{c.actor.first_name} #{c.actor.last_name}"
+      info
+    end
   end
 end
